@@ -8,17 +8,17 @@ NavBar::begin([
     'brandLabel' => Yii::$app->name,
     'brandUrl' => Yii::$app->homeUrl,
     'options' => [
-        'class' => 'navbar navbar-expand-md navbar-light bg-light fixed-top mb-4 shadow-sm',
+        'class' => 'navbar navbar-expand-md navbar-light bg-light fixed-top mb-4 shadow-sm ml-auto',
     ],
 ]);
 $menuItems = [
-    ['label' => 'Home', 'url' => ['/site/index']],
+    ['label' => 'create', 'url' => ['/site/index']],
 ];
 if (Yii::$app->user->isGuest) {
     $menuItems[] = ['label' => 'Login', 'url' => ['/site/login']];
 }
 echo Nav::widget([
-    'options' => ['class' => 'navbar-nav me-auto mb-2 mb-md-0'],
+    'options' => ['class' => 'navbar-nav  mb-2 mb-md-0 ms-auto'],
     'items' => $menuItems,
 ]);
 if (Yii::$app->user->isGuest) {
